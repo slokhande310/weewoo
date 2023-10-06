@@ -1,0 +1,116 @@
+.popular-food {
+    height: auto;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    margin: 0 auto;
+}
+
+.popular-food h2 {
+    text-align: center;
+    font-family: 'Titan One', cursive;
+    font-size: 3.5rem;
+    padding: 12px;
+    font-weight: lighter;
+}
+
+.popular-items {
+    display: flex;
+    gap: 0 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.popular-items p {
+    padding: 5px 15px;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.popular-items p.active {
+    text-decoration: underline;
+    text-underline-offset: 15px;
+}
+
+.popular-items p:hover {
+    text-decoration: underline;
+    text-underline-offset: 15px;
+}
+
+.popular-card {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    gap: 0 35px;
+    align-items: center;
+    margin-top: 45px;
+    flex-wrap: wrap;
+}
+
+.popular-card-item {
+    height: auto;
+    width: 35rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 80px;
+    /* box-shadow: 1px 1px 5px; */
+}
+
+.popular-card-item img {
+    width: 19rem;
+    height: 19rem;
+    margin-bottom: 15px;
+    transition: all 0.25s ease;
+}
+
+.popular-card-item img:hover {
+    scale: 1.1;
+}
+
+.popular-card-item h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    text-align: center;
+    padding: 5px 15px;
+    margin-bottom: 15px;
+    height: 60px;
+}
+
+.popular-card-item .popular-card-item-desc {
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 5px 15px;
+    margin-bottom: 15px;
+}
+
+.popular-card-item .popular-card-item-price {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.2rem;
+    padding: 5px 15px;
+    margin-bottom: 15px;
+}
+
+.popular-card-item .add-to-card-btn {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    border: 1px solid var(--secondarythemeColor);
+    background-color: var(--secondarythemeColor);
+    padding: 15px 35px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 30px;
+}
+
+.popular-card-item .add-to-card-btn:hover {
+    background-color: black;
+    border: 1px solid black;
+    color: white;
+}

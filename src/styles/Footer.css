@@ -1,0 +1,111 @@
+.footer {
+    position: relative;
+    padding: 30px 8%;
+    background: #f8f8f8;
+    width: 100%;
+    height: 45vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-logo-and-app {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-logo {
+    font-family: 'Rock Salt', cursive;
+    color: var(--secondarythemeColor);
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.footer-apps {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-apps img {
+    width: 135px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.about-and-socials {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(186, 182, 182, 0.551);
+}
+
+.footer-about .footer-about-list.header {
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 20px 0;
+    color: black;
+}
+
+.footer-about .footer-about-list {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+    margin: 8px 0;
+    color: gray;
+}
+
+
+.footer-socials {
+    margin: 0px 35px 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.4rem;
+    gap: 2px;
+    align-items: center;
+}
+
+.footer-socials .header {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 16px 0;
+    color: black;
+    font-size: 0.8rem;
+}
+
+.footer-social-links a i {
+    transition: all 0.15s ease-in;
+}
+
+.footer-social-links a .fa-facebook-f {
+    color: blue;
+}
+
+.footer-social-links a .fa-pinterest {
+    color: red;
+}
+
+.footer-social-links a .fa-instagram {
+    color: red;
+}
+
+.footer-social-links a .fa-x-twitter {
+    color: black;
+}
+
+.footer-social-links a:hover i {
+    transform: scale(1.2);
+}
+
+.footer-social-links a:active i {
+    transform: scale(0.9);
+}
+
+.copyright {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+}
