@@ -10,7 +10,7 @@ function Footer() {
                 <div className="footer-logo-and-app">
                     <div className="footer-logo">WeeWoo</div>
                     <div className="footer-apps">
-                        <img src={Appstore} role="img" alt="..." />
+                        <img src={Appstore} alt="..." />
                         <img src={Playstore} alt="..." />
                     </div>
                 </div>
@@ -39,10 +39,10 @@ function Footer() {
                     </div>
                     <div className="footer-socials">
                         <li className="footer-about-list header">SOCIALS</li>
-                        <li className="footer-social-links"><a href="#"><i className="fa-brands fa-facebook-f"></i></a></li>
-                        <li className="footer-social-links"><a href="#"><i className="fa-brands fa-pinterest"></i></a></li>
-                        <li className="footer-social-links"><a href="#"><i className="fa-brands fa-instagram"></i></a></li>
-                        <li className="footer-social-links"><a href="#"><i className="fa-brands fa-x-twitter"></i></a></li>
+                        <li className="footer-social-links"><a href="/"><i className="fa-brands fa-facebook-f"></i></a></li>
+                        <li className="footer-social-links"><a href="/"><i className="fa-brands fa-pinterest"></i></a></li>
+                        <li className="footer-social-links"><a href="/"><i className="fa-brands fa-instagram"></i></a></li>
+                        <li className="footer-social-links"><a href="/"><i className="fa-brands fa-x-twitter"></i></a></li>
                     </div>
                 </div>
                 <div className="copyright"> &#169; 2023 WeeWoo</div>

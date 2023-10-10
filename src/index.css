@@ -47,3 +47,7 @@ code {
   --themeColor: yellow;
   --secondarythemeColor: #f7b614;
 }
+
+a {
+  cursor: pointer;  
+}

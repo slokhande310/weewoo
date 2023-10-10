@@ -1,27 +1,79 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../styles/Navbar.css'
+import '../styles/LoginCard.css'
+import { Link } from 'react-router-dom'
 
 function Navbar() {
+
+    const [showBg, setShowBg] = useState(false);
+    const [showLogin, setShowLogin] = useState(false);
+    const [showSignUp, setShowSignUp] = useState(false);
+
+    const toggleBg = () => {
+        setShowBg(!showBg);
+        if (showLogin || showSignUp) {
+            setShowLogin('');
+            setShowSignUp('');
+        }
+    }
+
+    const toggleLoginCard = () => {
+        setShowLogin(!showLogin);
+        setShowBg(!showBg);
+    }
+
+    const toggleSignUpCard = () => {
+        setShowSignUp(!showSignUp);
+        setShowLogin(!showLogin);
+    }
+
     return (
         <>
-            <navbar className="navbar">
+            <div className="navbar">
                 <div className="logo">WeeWoo</div>
                 <ul className="navbar-items">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/">About</a></li>
-                    <li><a href="/">Blog</a></li>
-                    <li><a href="/">Contact</a></li>
-                    <li><a href="/">Careers</a></li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/about">About</Link></li>
+                    <li><Link to="/blog">Blog</Link></li>
+                    <li><Link to="/contact">Contact</Link></li>
+                    <li><Link to="/careers">Careers</Link></li>
                 </ul>
                 <div className="user-login">
-                    <li className="login-js"><a><i className="fa-regular fa-user"></i> Login </a></li>
-                    {/* <li className="sign-up-js"><a><i className="fa-solid fa-user-plus"></i> Sign Up </a></li>  */}
-                    <li><a><i className="fa-solid fa-cart-shopping"></i> Cart </a></li>
+                    <li onClick={toggleLoginCard}><span><i className="fa-regular fa-user"></i> Login </span></li>
+                    <li><Link to='/cart'><i className="fa-solid fa-cart-shopping"></i> Cart </Link></li>
                 </div>
                 <div className="menubar">
                     <i className="ham fa-solid fa-bars"></i>
                 </div>
-            </navbar>
+            </div>
+
+            <div className={`login-card-bg ${showBg ? 'active' : ''}`} onClick={toggleBg}></div>
+            <div id="login-card" className={`login-card ${!showLogin ? '' : 'active'}`}>
+                <h2>Login</h2>
+                <form className="login-form" action="">
+                    <input type="number" name="" placeholder="Mobile" required />
+                    <button type="submit" className="otp-btn">Send One Time Password</button>
+                </form>
+                <p className="more-options">or</p>
+                <p className="login-options"><i className="fa-solid fa-envelope"></i> Login with Email</p>
+                <p className="login-options"><i className="fa-brands fa-google"></i> Login with Google</p>
+                <p className="new-login">New to WeeWoo? <span onClick={toggleSignUpCard}>Create an account</span></p>
+            </div>
+
+            <div id="sign-up-card" className={`sign-up-card ${!showSignUp ? '' : 'active'}`}>
+                <h2>Sign Up</h2>
+                <form className="login-form" action="">
+                    <input type="text" name="" placeholder="Full Name" required />
+                    <input type="email" name="" placeholder="Email" required />
+                    <div className="t-and-c">
+                        <input type="checkbox" id="t-and-c-checkbox" required /> I agree to WeeWoo's Terms of Service, Privacy Policy and Content Policies
+                    </div>
+                    <button type="submit" className="otp-btn">Create account</button>
+                </form>
+                <p className="more-options">or</p>
+                <p className="login-options"><i className="fa-brands fa-google"></i> Login with Google</p>
+                <p className="new-login">Already have an account? <span className={` ${showLogin ? 'active' : ''}`} onClick={toggleSignUpCard}>Log in</span></p>
+            </div>
         </>
     )
 }
