@@ -1,0 +1,290 @@
+{
+    "burgers": [
+        {
+            "id": "1",
+            "name": "Classic Cheeseburger",
+            "price": 8.99,
+            "rating": 4.5,
+            "image": "https://example.com/burger/classic_cheeseburger.jpg"
+        },
+        {
+            "id": "2",
+            "name": "Double Bacon Burger",
+            "price": 10.49,
+            "rating": 4.7,
+            "image": "https://example.com/burger/double_bacon_burger.jpg"
+        },
+        {
+            "id": "3",
+            "name": "Veggie Burger",
+            "price": 7.99,
+            "rating": 4.2,
+            "image": "https://example.com/burger/veggie_burger.jpg"
+        },
+        {
+            "id": "4",
+            "name": "Spicy Chicken Burger",
+            "price": 9.99,
+            "rating": 4.4,
+            "image": "https://example.com/burger/spicy_chicken_burger.jpg"
+        },
+        {
+            "id": "5",
+            "name": "Mushroom Swiss Burger",
+            "price": 9.79,
+            "rating": 4.6,
+            "image": "https://example.com/burger/mushroom_swiss_burger.jpg"
+        },
+        {
+            "id": "6",
+            "name": "BBQ Pulled Pork Burger",
+            "price": 11.99,
+            "rating": 4.8,
+            "image": "https://example.com/burger/bbq_pulled_pork_burger.jpg"
+        },
+        {
+            "id": "7",
+            "name": "Teriyaki Salmon Burger",
+            "price": 12.99,
+            "rating": 4.4,
+            "image": "https://example.com/burger/teriyaki_salmon_burger.jpg"
+        },
+        {
+            "id": "8",
+            "name": "Gourmet Lamb Burger",
+            "price": 13.49,
+            "rating": 4.7,
+            "image": "https://example.com/burger/gourmet_lamb_burger.jpg"
+        },
+        {
+            "id": "9",
+            "name": "Avocado Turkey Burger",
+            "price": 10.99,
+            "rating": 4.3,
+            "image": "https://example.com/burger/avocado_turkey_burger.jpg"
+        },
+        {
+            "id": "10",
+            "name": "Breakfast Burger",
+            "price": 8.49,
+            "rating": 4.0,
+            "image": "https://example.com/burger/breakfast_burger.jpg"
+        }
+    ],
+    "pizza": [
+        {
+            "id": "1",
+            "name": "Margherita Pizza",
+            "price": 9.99,
+            "rating": 4.5,
+            "image": "https://example.com/pizza/margherita.jpg"
+        },
+        {
+            "id": "2",
+            "name": "Pepperoni Pizza",
+            "price": 10.49,
+            "rating": 4.7,
+            "image": "https://example.com/pizza/pepperoni.jpg"
+        },
+        {
+            "id": "3",
+            "name": "Hawaiian Pizza",
+            "price": 11.99,
+            "rating": 4.2,
+            "image": "https://example.com/pizza/hawaiian.jpg"
+        },
+        {
+            "id": "4",
+            "name": "Vegetarian Pizza",
+            "price": 10.99,
+            "rating": 4.4,
+            "image": "https://example.com/pizza/vegetarian.jpg"
+        },
+        {
+            "id": "5",
+            "name": "Supreme Pizza",
+            "price": 12.79,
+            "rating": 4.6,
+            "image": "https://example.com/pizza/supreme.jpg"
+        },
+        {
+            "id": "6",
+            "name": "BBQ Chicken Pizza",
+            "price": 11.99,
+            "rating": 4.8,
+            "image": "https://example.com/pizza/bbqchicken.jpg"
+        },
+        {
+            "id": "7",
+            "name": "Mushroom Pizza",
+            "price": 9.79,
+            "rating": 4.4,
+            "image": "https://example.com/pizza/mushroom.jpg"
+        },
+        {
+            "id": "8",
+            "name": "Meat Lovers Pizza",
+            "price": 12.99,
+            "rating": 4.7,
+            "image": "https://example.com/pizza/meatlovers.jpg"
+        },
+        {
+            "id": "9",
+            "name": "Pesto Pizza",
+            "price": 10.99,
+            "rating": 4.3,
+            "image": "https://example.com/pizza/pesto.jpg"
+        },
+        {
+            "id": "10",
+            "name": "Vegan Pizza",
+            "price": 11.49,
+            "rating": 4.0,
+            "image": "https://example.com/pizza/vegan.jpg"
+        }
+    ],
+    "indianCuisines": [
+        {
+            "id": "1",
+            "name": "Chicken Biryani",
+            "price": 12.99,
+            "rating": 4.6,
+            "image": "https://example.com/cuisine/biryani.jpg"
+        },
+        {
+            "id": "2",
+            "name": "Butter Chicken",
+            "price": 11.49,
+            "rating": 4.5,
+            "image": "https://example.com/cuisine/butter_chicken.jpg"
+        },
+        {
+            "id": "3",
+            "name": "Paneer Tikka",
+            "price": 9.99,
+            "rating": 4.4,
+            "image": "https://example.com/cuisine/paneer_tikka.jpg"
+        },
+        {
+            "id": "4",
+            "name": "Masala Dosa",
+            "price": 8.99,
+            "rating": 4.7,
+            "image": "https://example.com/cuisine/masala_dosa.jpg"
+        },
+        {
+            "id": "5",
+            "name": "Tandoori Chicken",
+            "price": 10.79,
+            "rating": 4.3,
+            "image": "https://example.com/cuisine/tandoori_chicken.jpg"
+        },
+        {
+            "id": "6",
+            "name": "Rogan Josh",
+            "price": 13.99,
+            "rating": 4.8,
+            "image": "https://example.com/cuisine/rogan_josh.jpg"
+        },
+        {
+            "id": "7",
+            "name": "Chole Bhature",
+            "price": 9.79,
+            "rating": 4.6,
+            "image": "https://example.com/cuisine/chole_bhature.jpg"
+        },
+        {
+            "id": "8",
+            "name": "Pani Puri",
+            "price": 7.49,
+            "rating": 4.2,
+            "image": "https://example.com/cuisine/pani_puri.jpg"
+        },
+        {
+            "id": "9",
+            "name": "Hyderabadi Dum Biryani",
+            "price": 14.99,
+            "rating": 4.9,
+            "image": "https://example.com/cuisine/hyderabadi_dum_biryani.jpg"
+        },
+        {
+            "id": "10",
+            "name": "Veg Pulav",
+            "price": 9.99,
+            "rating": 4.0,
+            "image": "https://example.com/cuisine/gulab_jamun.jpg"
+        }
+    ],
+    "icecream": [
+        {
+            "id": "1",
+            "name": "Vanilla Ice Cream",
+            "price": 4.99,
+            "rating": 4.7,
+            "image": "https://example.com/ice-cream/vanilla.jpg"
+        },
+        {
+            "id": "2",
+            "name": "Chocolate Chip Cookie Dough",
+            "price": 5.49,
+            "rating": 4.8,
+            "image": "https://example.com/ice-cream/chocolate_chip_cookie_dough.jpg"
+        },
+        {
+            "id": "3",
+            "name": "Strawberry Sorbet",
+            "price": 4.99,
+            "rating": 4.6,
+            "image": "https://example.com/ice-cream/strawberry_sorbet.jpg"
+        },
+        {
+            "id": "4",
+            "name": "Mint Chocolate Chip",
+            "price": 5.29,
+            "rating": 4.5,
+            "image": "https://example.com/ice-cream/mint_chocolate_chip.jpg"
+        },
+        {
+            "id": "5",
+            "name": "Cookies and Cream",
+            "price": 5.49,
+            "rating": 4.8,
+            "image": "https://example.com/ice-cream/cookies_and_cream.jpg"
+        },
+        {
+            "id": "6",
+            "name": "Rocky Road",
+            "price": 5.79,
+            "rating": 4.7,
+            "image": "https://example.com/ice-cream/rocky_road.jpg"
+        },
+        {
+            "id": "7",
+            "name": "Butter Pecan",
+            "price": 4.99,
+            "rating": 4.4,
+            "image": "https://example.com/ice-cream/butter_pecan.jpg"
+        },
+        {
+            "id": "8",
+            "name": "Pistachio",
+            "price": 5.29,
+            "rating": 4.5,
+            "image": "https://example.com/ice-cream/pistachio.jpg"
+        },
+        {
+            "id": "9",
+            "name": "Caramel Swirl",
+            "price": 5.49,
+            "rating": 4.6,
+            "image": "https://example.com/ice-cream/caramel_swirl.jpg"
+        },
+        {
+            "id": "10",
+            "name": "Rainbow Sherbet",
+            "price": 4.99,
+            "rating": 4.3,
+            "image": "https://example.com/ice-cream/rainbow_sherbet.jpg"
+        }
+    ]
+}

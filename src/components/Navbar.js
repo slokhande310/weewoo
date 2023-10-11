@@ -30,13 +30,12 @@ function Navbar() {
     return (
         <>
             <div className="navbar">
-                <div className="logo">WeeWoo</div>
+                <div className="logo"><Link to="/">WeeWoo</Link></div>
                 <ul className="navbar-items">
                     <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About</Link></li>
+                    <li><Link to="/explore">Explore</Link></li>
                     <li><Link to="/blog">Blog</Link></li>
-                    <li><Link to="/contact">Contact</Link></li>
-                    <li><Link to="/careers">Careers</Link></li>
+                    <li><Link to="/help">Help</Link></li>
                 </ul>
                 <div className="user-login">
                     <li onClick={toggleLoginCard}><span><i className="fa-regular fa-user"></i> Login </span></li>

@@ -1,0 +1,22 @@
+[
+  { "id": 1, "name": "Deccan Gymkhana" },
+  { "id": 2, "name": "Koregaon Park" },
+  { "id": 3, "name": "Kothrud" },
+  { "id": 4, "name": "Viman Nagar" },
+  { "id": 5, "name": "Hadapsar" },
+  { "id": 6, "name": "Aundh" },
+  { "id": 7, "name": "Baner" },
+  { "id": 8, "name": "Camp" },
+  { "id": 9, "name": "Hinjewadi" },
+  { "id": 10, "name": "Wakad" },
+  { "id": 11, "name": "Shivajinagar" },
+  { "id": 12, "name": "Magarpatta" },
+  { "id": 13, "name": "Pimpri-Chinchwad" },
+  { "id": 14, "name": "Katraj" },
+  { "id": 15, "name": "Warje" },
+  { "id": 16, "name": "Bhosari" },
+  { "id": 17, "name": "Kalyani Nagar" },
+  { "id": 18, "name": "Mundhwa" },
+  { "id": 19, "name": "Pimple Saudagar" },
+  { "id": 20, "name": "Dhayari" }
+]

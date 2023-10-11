@@ -4,6 +4,8 @@ import item1 from '../images/item1.jpg';
 import item2 from '../images/item2.jpg';
 import item3 from '../images/item3.jpg';
 import item4 from '../images/item4.jpg';
+import item5 from '../images/item5.jpg';
+import item6 from '../images/item6.jpg';
 
 function PopularFood() {
     return (
@@ -21,7 +23,7 @@ function PopularFood() {
                         <img src={item1} alt='burger' />
                         <h3>Cheese Burger with Salad</h3>
                         <p className="popular-card-item-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit....</p>
-                        <p className="popular-card-item-price">$19.00</p>
+                        <p className="popular-card-item-price">$9.00</p>
                         <span className="add-to-card-btn">Add to cart</span>
                     </div>
                     <div className="popular-card-item">
@@ -43,6 +45,20 @@ function PopularFood() {
                         <h3>Classic Bacon Hamburger</h3>
                         <p className="popular-card-item-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit....</p>
                         <p className="popular-card-item-price">$11.99</p>
+                        <span className="add-to-card-btn">Add to cart</span>
+                    </div>
+                    <div className="popular-card-item">
+                        <img src={item5} alt='burger' />
+                        <h3>Double Bacon Burger</h3>
+                        <p className="popular-card-item-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit....</p>
+                        <p className="popular-card-item-price">$12.99</p>
+                        <span className="add-to-card-btn">Add to cart</span>
+                    </div>
+                    <div className="popular-card-item">
+                        <img src={item6} alt='burger' />
+                        <h3>BBQ Pulled Pork Burger</h3>
+                        <p className="popular-card-item-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit....</p>
+                        <p className="popular-card-item-price">$15.99</p>
                         <span className="add-to-card-btn">Add to cart</span>
                     </div>
                 </div>

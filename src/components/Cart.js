@@ -37,6 +37,7 @@ function Cart() {
                                 <div>Fish</div>
                             </div>
                         </div>
+                        <div className="center-line"></div>
                         <div className="cart-total">
                             <p>Delivery Charges</p>
                             <p>Free Delivery</p>

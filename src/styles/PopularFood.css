@@ -50,7 +50,7 @@
 
 .popular-card-item {
     height: auto;
-    width: 35rem;
+    width: 28rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,6 +63,10 @@
     height: 19rem;
     margin-bottom: 15px;
     transition: all 0.25s ease;
+}
+
+.popular-card-item:nth-child(5) img {
+    filter: brightness(1) contrast(0.9);
 }
 
 .popular-card-item img:hover {
@@ -83,7 +87,7 @@
     text-align: center;
     font-weight: 600;
     font-size: 0.9rem;
-    padding: 5px 15px;
+    padding: 5px 5rem;
     margin-bottom: 15px;
 }
 
