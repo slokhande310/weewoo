@@ -1,0 +1,82 @@
+[
+    {
+        "id": "21",
+        "name": "Chicken Biryani",
+        "price": 12.99,
+        "rating": 4.6,
+        "image": "https://example.com/cuisine/biryani.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo."
+    },
+    {
+        "id": "22",
+        "name": "Butter Chicken",
+        "price": 11.49,
+        "rating": 4.5,
+        "image": "https://example.com/cuisine/butter_chicken.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo."
+    },
+    {
+        "id": "23",
+        "name": "Paneer Tikka",
+        "price": 9.99,
+        "rating": 4.4,
+        "image": "https://example.com/cuisine/paneer_tikka.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo."
+    },
+    {
+        "id": "24",
+        "name": "Masala Dosa",
+        "price": 8.99,
+        "rating": 4.7,
+        "image": "https://example.com/cuisine/masala_dosa.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo."
+    },
+    {
+        "id": "25",
+        "name": "Tandoori Chicken",
+        "price": 10.79,
+        "rating": 4.3,
+        "image": "https://example.com/cuisine/tandoori_chicken.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo."
+    },
+    {
+        "id": "26",
+        "name": "Rogan Josh",
+        "price": 13.99,
+        "rating": 4.8,
+        "image": "https://example.com/cuisine/rogan_josh.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo."
+    },
+    {
+        "id": "27",
+        "name": "Chole Bhature",
+        "price": 9.79,
+        "rating": 4.6,
+        "image": "https://example.com/cuisine/chole_bhature.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo."
+    },
+    {
+        "id": "28",
+        "name": "Pani Puri",
+        "price": 7.49,
+        "rating": 4.2,
+        "image": "https://example.com/cuisine/pani_puri.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo."
+    },
+    {
+        "id": "29",
+        "name": "Hyderabadi Dum Biryani",
+        "price": 14.99,
+        "rating": 4.9,
+        "image": "https://example.com/cuisine/hyderabadi_dum_biryani.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo."
+    },
+    {
+        "id": "30",
+        "name": "Veg Pulav",
+        "price": 9.99,
+        "rating": 4.0,
+        "image": "https://example.com/cuisine/gulab_jamun.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo."
+    }
+]

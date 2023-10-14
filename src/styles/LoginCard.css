@@ -1,6 +1,6 @@
 .login-card-bg {
     display: none;
-    z-index: 2;
+    z-index: 11;
     position: fixed;
     height: 100vh;
     width: 100%;
@@ -17,12 +17,13 @@
 .login-card {
     display: none;
     position: fixed;
-    z-index: 4;
+    z-index: 11;
     background-color: white;
     flex-direction: column;
     padding: 25px;
     width: 400px;
-    height: 450px;
+    min-height: 480px;
+    height: auto;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -103,7 +104,6 @@
     border: 1px solid var(--secondarythemeColor);
     margin-bottom: 20px;
     cursor: pointer;
-    /* transition: all 0.1s ease; */
 }
 
 .login-form .otp-btn:hover {
@@ -135,12 +135,13 @@
 .sign-up-card {
     display: none;
     position: fixed;
-    z-index: 4;
+    z-index: 11;
     background-color: white;
     flex-direction: column;
     padding: 25px;
     width: 400px;
-    height: 480px;
+    min-height: 440px;
+    height: auto;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -162,11 +163,12 @@
     align-items: center;
     margin-bottom: 10px;
     padding: 0 5px;
-    gap: 0 10px;
+    /* gap: 0 10px; */
     font-size: .9rem;
 }
 
 #t-and-c-checkbox {
-    width: 28px;
-    height: 28px;
+    width: 30px;
+    height: 30px;
+    align-self: flex-start !important;
 }

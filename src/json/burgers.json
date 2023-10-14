@@ -1,0 +1,82 @@
+[
+    {
+        "id": "1",
+        "name": "Classic Cheeseburger",
+        "price": 8.99,
+        "rating": 4.5,
+        "image": "https://example.com/burger/classic_cheeseburger.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo."
+    },
+    {
+        "id": "2",
+        "name": "Double Bacon Burger",
+        "price": 10.49,
+        "rating": 4.7,
+        "image": "https://example.com/burger/double_bacon_burger.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo."
+    },
+    {
+        "id": "3",
+        "name": "Veggie Burger",
+        "price": 7.99,
+        "rating": 4.2,
+        "image": "https://example.com/burger/veggie_burger.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo."
+    },
+    {
+        "id": "4",
+        "name": "Spicy Chicken Burger",
+        "price": 9.99,
+        "rating": 4.4,
+        "image": "https://example.com/burger/spicy_chicken_burger.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo."
+    },
+    {
+        "id": "5",
+        "name": "Mushroom Swiss Burger",
+        "price": 9.79,
+        "rating": 4.6,
+        "image": "https://example.com/burger/mushroom_swiss_burger.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo."
+    },
+    {
+        "id": "6",
+        "name": "BBQ Pulled Pork Burger",
+        "price": 11.99,
+        "rating": 4.8,
+        "image": "https://example.com/burger/bbq_pulled_pork_burger.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo."
+    },
+    {
+        "id": "7",
+        "name": "Teriyaki Salmon Burger",
+        "price": 12.99,
+        "rating": 4.4,
+        "image": "https://example.com/burger/teriyaki_salmon_burger.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo."
+    },
+    {
+        "id": "8",
+        "name": "Gourmet Lamb Burger",
+        "price": 13.49,
+        "rating": 4.7,
+        "image": "https://example.com/burger/gourmet_lamb_burger.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo."
+    },
+    {
+        "id": "9",
+        "name": "Avocado Turkey Burger",
+        "price": 10.99,
+        "rating": 4.3,
+        "image": "https://example.com/burger/avocado_turkey_burger.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo."
+    },
+    {
+        "id": "10",
+        "name": "Breakfast Burger",
+        "price": 8.49,
+        "rating": 4.0,
+        "image": "https://example.com/burger/breakfast_burger.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo."
+    }
+]

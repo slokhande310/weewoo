@@ -1,0 +1,82 @@
+[
+    {
+        "id": "31",
+        "name": "Vanilla Ice Cream",
+        "price": 4.99,
+        "rating": 4.7,
+        "image": "https://example.com/ice-cream/vanilla.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo."
+    },
+    {
+        "id": "32",
+        "name": "Chocolate Chip Cookie Dough",
+        "price": 5.49,
+        "rating": 4.8,
+        "image": "https://example.com/ice-cream/chocolate_chip_cookie_dough.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo."
+    },
+    {
+        "id": "33",
+        "name": "Strawberry Sorbet",
+        "price": 4.99,
+        "rating": 4.6,
+        "image": "https://example.com/ice-cream/strawberry_sorbet.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo."
+    },
+    {
+        "id": "34",
+        "name": "Mint Chocolate Chip",
+        "price": 5.29,
+        "rating": 4.5,
+        "image": "https://example.com/ice-cream/mint_chocolate_chip.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo."
+    },
+    {
+        "id": "35",
+        "name": "Cookies and Cream",
+        "price": 5.49,
+        "rating": 4.8,
+        "image": "https://example.com/ice-cream/cookies_and_cream.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo."
+    },
+    {
+        "id": "36",
+        "name": "Rocky Road",
+        "price": 5.79,
+        "rating": 4.7,
+        "image": "https://example.com/ice-cream/rocky_road.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo."
+    },
+    {
+        "id": "37",
+        "name": "Butter Pecan",
+        "price": 4.99,
+        "rating": 4.4,
+        "image": "https://example.com/ice-cream/butter_pecan.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo."
+    },
+    {
+        "id": "38",
+        "name": "Pistachio",
+        "price": 5.29,
+        "rating": 4.5,
+        "image": "https://example.com/ice-cream/pistachio.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo."
+    },
+    {
+        "id": "39",
+        "name": "Caramel Swirl",
+        "price": 5.49,
+        "rating": 4.6,
+        "image": "https://example.com/ice-cream/caramel_swirl.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo."
+    },
+    {
+        "id": "40",
+        "name": "Rainbow Sherbet",
+        "price": 4.99,
+        "rating": 4.3,
+        "image": "https://example.com/ice-cream/rainbow_sherbet.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo."
+    }
+]

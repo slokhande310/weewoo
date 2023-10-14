@@ -22,6 +22,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route exact path='/' element={<><Main /><FoodCard /><PopularFood /></>} />
+          <Route exact path='/login' element={<><Main /><FoodCard /><PopularFood /></>} />
+          <Route exact path='/signup' element={<><Main /><FoodCard /><PopularFood /></>} />
           <Route exact path='/explore' element={<><Explore /></>} />
           <Route exact path='/cart' element={<Cart />} />
         </Routes>

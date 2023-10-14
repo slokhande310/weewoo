@@ -1,0 +1,82 @@
+[
+    {
+        "id": "11",
+        "name": "Margherita Pizza",
+        "price": 9.99,
+        "rating": 4.5,
+        "image": "https://example.com/pizza/margherita.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo."
+    },
+    {
+        "id": "12",
+        "name": "Pepperoni Pizza",
+        "price": 10.49,
+        "rating": 4.7,
+        "image": "https://example.com/pizza/pepperoni.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo."
+    },
+    {
+        "id": "13",
+        "name": "Hawaiian Pizza",
+        "price": 11.99,
+        "rating": 4.2,
+        "image": "https://example.com/pizza/hawaiian.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo."
+    },
+    {
+        "id": "14",
+        "name": "Vegetarian Pizza",
+        "price": 10.99,
+        "rating": 4.4,
+        "image": "https://example.com/pizza/vegetarian.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo."
+    },
+    {
+        "id": "15",
+        "name": "Supreme Pizza",
+        "price": 12.79,
+        "rating": 4.6,
+        "image": "https://example.com/pizza/supreme.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo."
+    },
+    {
+        "id": "16",
+        "name": "BBQ Chicken Pizza",
+        "price": 11.99,
+        "rating": 4.8,
+        "image": "https://example.com/pizza/bbqchicken.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo."
+    },
+    {
+        "id": "17",
+        "name": "Mushroom Pizza",
+        "price": 9.79,
+        "rating": 4.4,
+        "image": "https://example.com/pizza/mushroom.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo."
+    },
+    {
+        "id": "18",
+        "name": "Meat Lovers Pizza",
+        "price": 12.99,
+        "rating": 4.7,
+        "image": "https://example.com/pizza/meatlovers.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo."
+    },
+    {
+        "id": "19",
+        "name": "Pesto Pizza",
+        "price": 10.99,
+        "rating": 4.3,
+        "image": "https://example.com/pizza/pesto.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo."
+    },
+    {
+        "id": "20",
+        "name": "Vegan Pizza",
+        "price": 11.49,
+        "rating": 4.0,
+        "image": "https://example.com/pizza/vegan.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo."
+    }
+]
