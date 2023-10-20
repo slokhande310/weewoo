@@ -1,107 +1,67 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import '../styles/Explore.css'
-import item1 from '../images/item1.jpg';
+import ExploreFoodCard from './ExploreFoodCard';
 
 function Explore() {
+
+    const capitalizeFirstLetter = word => word && word[0].toUpperCase() + word.slice(1);
+
+    const [menuItem, setMenuItem] = useState([]);
+    const [foodCategory, setFoodCategory] = useState([]);
+
+    const loadData = async () => {
+        let response = await fetch("http://127.0.0.1:8000/explore", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+
+        response = await response.json();
+        // console.log(response[0], response[1]);
+        setMenuItem(response[0]);
+        setFoodCategory(response[1]);
+    }
+
+    useEffect(() => {
+        loadData();
+    }, []);
+
     return (
         <>
             <div className="explore-page">
-                <div class="sidebar">
+                <div className="sidebar">
                     <h2>Food Preferences</h2>
-                    <div className="pizza-checkbox">
-                        <input type="checkbox" id="pizza" name="food" value="pizza" />
-                        <label for="pizza">Pizza</label>
-                    </div>
-                    <div className="burger-checkbox">
-                        <input type="checkbox" id="burger" name="food" value="burger" />
-                        <label for="burger">Burger</label>
-                    </div>
-                    <div className="indian-cuisine-checkbox">
-                        <input type="checkbox" id="indianCuisine" name="food" value="indianCuisine" />
-                        <label for="indianCuisine">Indian Cuisines</label>
-                    </div>
-                    <div className="desserts-checkbox">
-                        <input type="checkbox" id="desserts" name="food" value="desserts" />
-                        <label for="desserts">Desserts</label>
-                    </div>
+                    {
+                        foodCategory !== ""
+                            ? foodCategory.map((data) => {
+                                return (
+                                    <div key={data._id}>
+                                        <div className={`${data.category}-checkbox`}>
+                                            <input type="checkbox" id={data.category} name="food" value={data.category} />
+                                            <label htmlFor={data.category}>{data.category === 'indian cuisine' ? "Indian Cuisine" : capitalizeFirstLetter(data.category)}</label>
+                                        </div>
+                                    </div>
+                                )
+                            })
+                            : ""
+                    }
                 </div>
                 <div className="explore-food">
-                    <div className="explore-food-item">
-                        <div className="explore-food-item-rating">
-                            <i class="fa-solid fa-star"></i> <span>4.5</span>
-                        </div>
-                        <img src={item1} alt="" />
-                        <div className="explore-food-item-info">
-                            <h3>Classic Cheeseburger</h3>
-                            <p className="explore-food-item-info-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo.</p>
-                            <p className="explore-food-item-info-price">$9.00</p>
-                            <button className='explore-food-item-btn'>Add to Cart</button>
-                        </div>
-                    </div>
-                    <div className="explore-food-item">
-                        <div className="explore-food-item-rating">
-                            <i class="fa-solid fa-star"></i> <span>4.5</span>
-                        </div>
-                        <img src={item1} alt="" />
-                        <div className="explore-food-item-info">
-                            <h3>Classic Cheeseburger</h3>
-                            <p className="explore-food-item-info-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo.</p>
-                            <p className="explore-food-item-info-price">$9.00</p>
-                            <button className='explore-food-item-btn'>Add to Cart</button>
-                        </div>
-                    </div>
-                    <div className="explore-food-item">
-                        <div className="explore-food-item-rating">
-                            <i class="fa-solid fa-star"></i> <span>4.5</span>
-                        </div>
-                        <img src={item1} alt="" />
-                        <div className="explore-food-item-info">
-                            <h3>Classic Cheeseburger</h3>
-                            <p className="explore-food-item-info-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo.</p>
-                            <p className="explore-food-item-info-price">$9.00</p>
-                            <button className='explore-food-item-btn'>Add to Cart</button>
-                        </div>
-                    </div>
-                    <div className="explore-food-item">
-                        <div className="explore-food-item-rating">
-                            <i class="fa-solid fa-star"></i> <span>4.5</span>
-                        </div>
-                        <img src={item1} alt="" />
-                        <div className="explore-food-item-info">
-                            <h3>Classic Cheeseburger</h3>
-                            <p className="explore-food-item-info-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo.</p>
-                            <p className="explore-food-item-info-price">$9.00</p>
-                            <button className='explore-food-item-btn'>Add to Cart</button>
-                        </div>
-                    </div>
-                    <div className="explore-food-item">
-                        <div className="explore-food-item-rating">
-                            <i class="fa-solid fa-star"></i> <span>4.5</span>
-                        </div>
-                        <img src={item1} alt="" />
-                        <div className="explore-food-item-info">
-                            <h3>Classic Cheeseburger</h3>
-                            <p className="explore-food-item-info-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo.</p>
-                            <p className="explore-food-item-info-price">$9.00</p>
-                            <button className='explore-food-item-btn'>Add to Cart</button>
-                        </div>
-                    </div>
-                    <div className="explore-food-item">
-                        <div className="explore-food-item-rating">
-                            <i class="fa-solid fa-star"></i> <span>4.5</span>
-                        </div>
-                        <img src={item1} alt="" />
-                        <div className="explore-food-item-info">
-                            <h3>Classic Cheeseburger</h3>
-                            <p className="explore-food-item-info-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nemo.</p>
-                            <p className="explore-food-item-info-price">$9.00</p>
-                            <button className='explore-food-item-btn'>Add to Cart</button>
-                        </div>
-                    </div>
+                    {
+                        menuItem !== ""
+                            ? menuItem.map((data) => {
+                                return (
+                                    <ExploreFoodCard key={data._id} rating={data.rating} name={data.name} price={data.price} description={data.description} image={data.image} />
+                                )
+                            })
+                            : ""
+                    }
                 </div>
-            </div>
+            </div >
         </>
     )
+
 }
 
 export default Explore

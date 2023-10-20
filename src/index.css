@@ -19,6 +19,7 @@ code {
 :root {
   --themeColor: yellow;
   --secondarythemeColor: #f7b614;
+  --backgroundColor: #fff
 }
 
 body {

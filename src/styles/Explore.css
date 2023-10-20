@@ -46,7 +46,7 @@ input[type="checkbox"] {
 .explore-food-item {
     margin: 15px 10px;
     border: 1px solid #68666667;
-    width: 25rem;
+    width: auto;
     height: 33rem;
     display: flex;
     flex-direction: column;

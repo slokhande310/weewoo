@@ -15,6 +15,7 @@ import {
 import Explore from './components/Explore';
 import Login from './components/Login';
 import Signup from './components/Signup';
+import Blog from './components/Blog';
 
 function App() {
   return (
@@ -24,9 +25,10 @@ function App() {
         <Navbar />
         <Routes>
           <Route exact path='/' element={<><Main /><FoodCard /><PopularFood /></>} />
+          <Route exact path='/explore' element={<><Explore /></>} />
+          <Route exact path='/blog' element={<><Blog /></>} />
           <Route exact path='/login' element={<><Login /></>} />
           <Route exact path='/signup' element={<><Signup /></>} />
-          <Route exact path='/explore' element={<><Explore /></>} />
           <Route exact path='/cart' element={<Cart />} />
         </Routes>
         <Footer />

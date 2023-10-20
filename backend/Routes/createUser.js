@@ -3,8 +3,13 @@ const router = express.Router();
 const User = require('../models/UserData')
 const { body, validationResult } = require('express-validator');
 const cors = require("cors");
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 router.use(cors());
 
+const jwtSecret = "qfktvrknassbkycawxcysdcsepwfidrn";
+
+// Endpoint logic for sign up
 
 router.post('/signup',
     ([
@@ -21,45 +26,67 @@ router.post('/signup',
 
         const { name, email, password } = req.body;
 
-        try {
-            await User.create({
-                name: name,
-                email: email,
-                password: password
-            });
-            res.json({ success: true });
-        } catch (error) {
-            console.log(error);
-            res.json({ success: false });
+        const salt = await bcrypt.genSalt(10);
+        const securedPassword = await bcrypt.hash(password, salt);
+
+        const userLoginDetails = await User.find({ email: email });
+
+        if (email !== userLoginDetails.email) {
+            try {
+                await User.create({
+                    name: name,
+                    email: email,
+                    password: securedPassword
+                })
+                res.json({ success: true });
+            } catch (error) {
+                console.log(error);
+                res.json({ success: false });
+            }
         }
+        else {
+            res.json({ success: false });
+            console.log('Email already exists');
+        }
+
+
     });
 
-router.post('/login',
-    async (req, res) => {
+// Endpoint logic for login
 
-        const errors = validationResult(req);
-        if (!errors.isEmpty()) {
-            return res.status(400).json({ errors: errors.array() })
+router.post('/login', async (req, res) => {
+
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        return res.status(400).json({ errors: errors.array() })
+    }
+
+    const { email, password } = req.body;
+
+    try {
+        const userLoginDetails = await User.findOne({ email: email });
+        if (!userLoginDetails) {
+            return res.status(400).json({ errors: 'Invalid Email/Password' })
         }
 
-        const { email, password } = req.body;
-
-        try {
-            const userLoginDetails = await User.findOne({ email: email });
-            if (!userLoginDetails) {
-                return res.status(400).json({ errors: 'Invalid Email/Password' })
-            }
-
-            if (password !== userLoginDetails.password) {
-                return res.status(400).json({ errors: 'Invalid Email/Password' })
-            }
-
-            res.json({ success: true });
-        } catch (error) {
-            console.log(error);
-            res.json({ success: false });
+        const comparePwd = await bcrypt.compare(password, userLoginDetails.password);
+        if (!comparePwd) {
+            return res.status(400).json({ errors: 'Invalid Email/Password' })
         }
-    });
+
+        const data = {
+            user: {
+                id: userLoginDetails.id
+            }
+        }
+
+        const authToken = jwt.sign(data, jwtSecret);
+        res.json({ success: true, authToken: authToken });
+    } catch (error) {
+        console.log(error);
+        res.json({ success: false });
+    }
+});
 
 
 

@@ -17,6 +17,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use('/', require('./Routes/createUser'));
+app.use('/', require('./Routes/displayData'));
 
 app.get('/', (req, res) => {
     res.send('i am backend');

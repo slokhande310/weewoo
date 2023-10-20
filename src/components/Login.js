@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import '../styles/Login.css'
+import '../styles/Signup.css'
 import { Link, useNavigate } from 'react-router-dom'
 
 function Login() {
@@ -23,6 +23,8 @@ function Login() {
 
     if (savedData.success) {
       setCredentials({ email: '', password: '' });
+      localStorage.setItem("authToken", savedData.authToken);
+      console.log(localStorage.getItem("authToken"));
       navigate('/');
     }
 

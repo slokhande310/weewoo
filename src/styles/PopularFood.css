@@ -65,10 +65,6 @@
     transition: all 0.25s ease;
 }
 
-.popular-card-item:nth-child(5) img {
-    filter: brightness(1) contrast(0.9);
-}
-
 .popular-card-item img:hover {
     scale: 1.1;
 }

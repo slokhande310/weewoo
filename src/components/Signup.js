@@ -21,7 +21,6 @@ function Signup() {
         console.log(savedData);
 
         if (savedData.success) {
-            setCredentials({ name: '', email: '', password: '' });
             navigate('/login');
         }
         if (!savedData.success) {

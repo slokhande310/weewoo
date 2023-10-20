@@ -72,6 +72,7 @@
 
 
 .user-login {
+    width: 15%;
     display: flex;
     font-weight: 700;
     font-size: 1.1rem;

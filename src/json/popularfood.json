@@ -1,0 +1,170 @@
+[
+    {
+        "name": "Classic Beef Burger",
+        "description": "A juicy, classic beef patty topped with fresh lettuce, tomatoes, onions, and cheddar cheese, served on a toasted sesame seed bun.",
+        "price": 8.99,
+        "image": "classic_beef_burger.jpg",
+        "category": "burger"
+    },
+    {
+        "name": "Vegetarian Delight Burger",
+        "description": "A mouthwatering veggie patty made from a blend of garden-fresh vegetables and herbs, served with lettuce, tomato, and special sauce.",
+        "price": 7.49,
+        "image": "vegetarian_delight_burger.jpg",
+        "category": "burger"
+    },
+    {
+        "name": "Spicy Chicken Inferno Burger",
+        "description": "A fiery chicken patty seasoned with hot spices, jalapeños, and pepper jack cheese, served on a jalapeño-infused bun.",
+        "price": 9.99,
+        "image": "spicy_chicken_inferno_burger.jpg",
+        "category": "burger"
+    },
+    {
+        "name": "Mushroom Swiss Burger",
+        "description": "A savory beef patty smothered in sautéed mushrooms and Swiss cheese, with a side of creamy mushroom sauce.",
+        "price": 8.49,
+        "image": "mushroom_swiss_burger.jpg",
+        "category": "burger"
+    },
+    {
+        "name": "BBQ Pulled Pork Burger",
+        "description": "Slow-cooked, tender pulled pork slathered in smoky BBQ sauce, topped with coleslaw and served on a brioche bun.",
+        "price": 10.99,
+        "image": "bbq_pulled_pork_burger.jpg",
+        "category": "burger"
+    },
+    {
+        "name": "Fisherman's Catch Burger",
+        "description": "A crispy breaded fish fillet with fresh lettuce, tartar sauce, and a squeeze of lemon, served in a soft potato roll.",
+        "price": 9.49,
+        "image": "fishermans_catch_burger.jpg",
+        "category": "burger"
+    },
+    {
+        "name": "Margherita Pizza",
+        "description": "A classic Italian pizza with a thin crust, topped with fresh tomato sauce, mozzarella cheese, and basil leaves.",
+        "price": 9.99,
+        "image": "margherita_pizza.jpg",
+        "category": "pizza"
+    },
+    {
+        "name": "Pepperoni Feast Pizza",
+        "description": "A hearty pizza loaded with spicy pepperoni slices, mozzarella cheese, and a zesty tomato sauce.",
+        "price": 11.49,
+        "image": "pepperoni_feast_pizza.jpg",
+        "category": "pizza"
+    },
+    {
+        "name": "Vegetarian Supreme Pizza",
+        "description": "A vegetarian delight featuring a variety of colorful veggies, olives, mozzarella cheese, and a rich tomato sauce.",
+        "price": 10.99,
+        "image": "vegetarian_supreme_pizza.jpg",
+        "category": "pizza"
+    },
+    {
+        "name": "Hawaiian Luau Pizza",
+        "description": "A tropical-inspired pizza with ham, pineapple chunks, mozzarella cheese, and a sweet and savory tomato sauce.",
+        "price": 11.99,
+        "image": "hawaiian_luau_pizza.jpg",
+        "category": "pizza"
+    },
+    {
+        "name": "Meat Lover's Delight Pizza",
+        "description": "For carnivores, this pizza features a mix of sausage, bacon, pepperoni, and mozzarella cheese on a rich tomato sauce.",
+        "price": 12.49,
+        "image": "meat_lovers_delight_pizza.jpg",
+        "category": "pizza"
+    },
+    {
+        "name": "Mushroom Truffle Pizza",
+        "description": "An exquisite pizza topped with sautéed mushrooms, truffle oil, mozzarella cheese, and a drizzle of balsamic reduction.",
+        "price": 13.99,
+        "image": "mushroom_truffle_pizza.jpg",
+        "category": "pizza"
+    },
+    {
+        "name": "Classic Beef Hotdog",
+        "description": "An all-American favorite, this hotdog features a juicy beef sausage in a soft bun, topped with ketchup, mustard, and relish.",
+        "price": 4.99,
+        "image": "classic_beef_hotdog.jpg",
+        "category": "hotdog"
+    },
+    {
+        "name": "Chili Cheese Dog",
+        "description": "A spicy delight, this hotdog is smothered in chili, topped with melted cheddar cheese, and finished with diced onions.",
+        "price": 5.49,
+        "image": "chili_cheese_dog.jpg",
+        "category": "hotdog"
+    },
+    {
+        "name": "Vegetarian Delight Hotdog",
+        "description": "A meatless option, featuring a flavorful veggie sausage in a bun with lettuce, tomato, and your choice of condiments.",
+        "price": 4.99,
+        "image": "vegetarian_delight_hotdog.jpg",
+        "category": "hotdog"
+    },
+    {
+        "name": "BBQ Bacon Hotdog",
+        "description": "A smoky treat with a beef sausage wrapped in crispy bacon, drizzled with BBQ sauce, and topped with caramelized onions.",
+        "price": 6.49,
+        "image": "bbq_bacon_hotdog.jpg",
+        "category": "hotdog"
+    },
+    {
+        "name": "Spicy Jalapeño Dog",
+        "description": "For those who love heat, this hotdog comes with jalapeño slices, pepper jack cheese, and a fiery hot sauce.",
+        "price": 5.99,
+        "image": "spicy_jalapeno_dog.jpg",
+        "category": "hotdog"
+    },
+    {
+        "name": "Chicago Style Hotdog",
+        "description": "A true Chicago classic with a beef sausage, yellow mustard, onions, pickle relish, tomatoes, pickles, and celery salt.",
+        "price": 5.99,
+        "image": "chicago_style_hotdog.jpg",
+        "category": "hotdog"
+    },
+    {
+        "name": "Teriyaki Chicken Bowl",
+        "description": "A savory bowl with tender teriyaki-glazed chicken, steamed jasmine rice, and a mix of stir-fried vegetables.",
+        "price": 9.99,
+        "image": "teriyaki_chicken_bowl.jpg",
+        "category": "bowlfood"
+    },
+    {
+        "name": "Vegetarian Buddha Bowl",
+        "description": "A nutritious bowl featuring quinoa, roasted vegetables, avocado, and a tahini dressing for a healthy and flavorful meal.",
+        "price": 8.49,
+        "image": "vegetarian_buddha_bowl.jpg",
+        "category": "bowlfood"
+    },
+    {
+        "name": "Poke Bowl",
+        "description": "A Hawaiian-inspired bowl with cubed raw fish, rice, seaweed, and a variety of fresh toppings, all drizzled with a zesty sauce.",
+        "price": 11.99,
+        "image": "poke_bowl.jpg",
+        "category": "bowlfood"
+    },
+    {
+        "name": "Mediterranean Grain Bowl",
+        "description": "A delightful grain bowl filled with couscous, chickpeas, cucumber, tomatoes, olives, and a lemon vinaigrette.",
+        "price": 10.99,
+        "image": "mediterranean_grain_bowl.jpg",
+        "category": "bowlfood"
+    },
+    {
+        "name": "Thai Red Curry Noodle Bowl",
+        "description": "A spicy noodle bowl with a creamy red curry broth, tofu or shrimp, and an assortment of vegetables, garnished with herbs.",
+        "price": 11.49,
+        "image": "thai_red_curry_noodle_bowl.jpg",
+        "category": "bowlfood"
+    },
+    {
+        "name": "Acai Bowl",
+        "description": "A refreshing and nutritious bowl with acai puree, granola, fresh berries, and a drizzle of honey for a sweet and healthy treat.",
+        "price": 7.99,
+        "image": "acai_bowl.jpg",
+        "category": "bowlfood"
+    }
+]
