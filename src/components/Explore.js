@@ -52,7 +52,7 @@ function Explore() {
                         menuItem !== ""
                             ? menuItem.map((data) => {
                                 return (
-                                    <ExploreFoodCard key={data._id} rating={data.rating} name={data.name} price={data.price} description={data.description} image={data.image} />
+                                    <ExploreFoodCard key={data._id} foodItems={data} />
                                 )
                             })
                             : ""

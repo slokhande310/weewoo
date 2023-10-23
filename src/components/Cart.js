@@ -24,18 +24,6 @@ function Cart() {
                                 <div>Fish</div>
                                 <div>Fish</div>
                             </div>
-                            <div className="cart-items-header">
-                                <div>Fish</div>
-                                <div>Fish</div>
-                                <div>Fish</div>
-                                <div>Fish</div>
-                            </div>
-                            <div className="cart-items-header">
-                                <div>Fish</div>
-                                <div>Fish</div>
-                                <div>Fish</div>
-                                <div>Fish</div>
-                            </div>
                         </div>
                         <div className="center-line"></div>
                         <div className="cart-total">

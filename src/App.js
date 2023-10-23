@@ -16,23 +16,26 @@ import Explore from './components/Explore';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import Blog from './components/Blog';
+import { CartProvider } from './components/ContextReducer';
 
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <ScrollToTop />
-        <Navbar />
-        <Routes>
-          <Route exact path='/' element={<><Main /><FoodCard /><PopularFood /></>} />
-          <Route exact path='/explore' element={<><Explore /></>} />
-          <Route exact path='/blog' element={<><Blog /></>} />
-          <Route exact path='/login' element={<><Login /></>} />
-          <Route exact path='/signup' element={<><Signup /></>} />
-          <Route exact path='/cart' element={<Cart />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
+      <CartProvider>
+        <BrowserRouter>
+          <ScrollToTop />
+          <Navbar />
+          <Routes>
+            <Route exact path='/' element={<><Main /><FoodCard /><PopularFood /></>} />
+            <Route exact path='/explore' element={<><Explore /></>} />
+            <Route exact path='/blog' element={<><Blog /></>} />
+            <Route exact path='/login' element={<><Login /></>} />
+            <Route exact path='/signup' element={<><Signup /></>} />
+            <Route exact path='/cart' element={<Cart />} />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+      </CartProvider>
     </>
   );
 }

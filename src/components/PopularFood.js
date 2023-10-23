@@ -1,14 +1,13 @@
 import { React, useEffect, useState } from 'react';
 import '../styles/PopularFood.css';
-import burger1 from '../images/burger1.jpg';
-import pizza1 from '../images/pizza1.jpg';
-import bowlFood1 from '../images/bowlfood.jpg';
-import hotdog1 from '../images/hotdog.jpg';
+import { useCart, useDispatchCart } from './ContextReducer';
 
 function PopularFood() {
-
     const [active, setActive] = useState('burger');
     const [popularFoodItem, setpopularFoodItem] = useState([]);
+
+    let dispatch = useDispatchCart();
+    let data = useCart();
 
     const loadData = async () => {
         let response = await fetch("http://127.0.0.1:8000/", {
@@ -31,6 +30,16 @@ function PopularFood() {
         setActive(item);
     }
 
+    const handleAddToCart = async (item) => {
+        await dispatch({
+            type: "ADD",
+            id: item._id,
+            name: item.name,
+            price: item.price
+        });
+        console.log(data);
+    }
+
     return (
         <>
             <section className="popular-food">
@@ -48,11 +57,12 @@ function PopularFood() {
                                 .map((data) => {
                                     return (
                                         <div className="popular-card-item" key={data._id}>
-                                            <img src={active === 'burger' ? burger1 : (active === 'pizza' ? pizza1 : (active === 'bowlfood' ? bowlFood1 : hotdog1))} alt={`${data.category}`} />
+                                            <img src={data.image} alt={`${data.category}`} />
+                                            {/* <img src={active === 'burger' ? burger1 : (active === 'pizza' ? pizza1 : (active === 'bowlfood' ? bowlFood1 : hotdog1))} alt={`${data.category}`} /> */}
                                             <h3>{data.name}</h3>
                                             <p className="popular-card-item-desc">{data.description}</p>
                                             <p className="popular-card-item-price">${data.price}</p>
-                                            <span className="add-to-card-btn">Add to cart</span>
+                                            <span className="add-to-card-btn" onClick={() => handleAddToCart(data)}>Add to cart</span>
                                         </div>
                                     )
                                 })
