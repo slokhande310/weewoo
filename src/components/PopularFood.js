@@ -1,13 +1,14 @@
 import { React, useEffect, useState } from 'react';
 import '../styles/PopularFood.css';
-import { useCart, useDispatchCart } from './ContextReducer';
+import { useDispatchCart } from './ContextReducer';
+// import { useCart, useDispatchCart } from './ContextReducer';
 
 function PopularFood() {
     const [active, setActive] = useState('burger');
     const [popularFoodItem, setpopularFoodItem] = useState([]);
 
     let dispatch = useDispatchCart();
-    let data = useCart();
+    // let data = useCart();
 
     const loadData = async () => {
         let response = await fetch("http://127.0.0.1:8000/", {
@@ -31,13 +32,32 @@ function PopularFood() {
     }
 
     const handleAddToCart = async (item) => {
+        const quantity = 1;
+        // onclick, id, name, price sent to cart and used further to display
         await dispatch({
             type: "ADD",
             id: item._id,
             name: item.name,
-            price: item.price
+            price: item.price,
+            quantity: quantity
         });
-        console.log(data);
+
+        // Retrieve the existing cart data from local storage
+        const existingCart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Check if the item already exists in the cart
+        const itemExists = existingCart.some((cartItem) => cartItem.id === item._id);
+
+        if (!itemExists) {
+            // Append the new item to the existing cart data
+            existingCart.push({ id: item._id, name: item.name, price: item.price, quantity: item.quantity });
+
+            // Store the updated cart data in local storage
+            localStorage.setItem('cart', JSON.stringify(existingCart));
+        } else {
+            alert('Item already exists in the cart, not adding it again.');
+        }
+
     }
 
     return (

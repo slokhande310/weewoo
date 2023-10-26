@@ -2,11 +2,11 @@ import React from 'react'
 import '../styles/Navbar.css'
 import '../styles/LoginCard.css'
 import { Link, useNavigate } from 'react-router-dom'
+// import { useCart } from './ContextReducer';
 
 function Navbar() {
-
+    // let data = useCart();
     const navigate = useNavigate();
-
     const handleLogout = () => {
         localStorage.removeItem("authToken");
         navigate("/")
@@ -26,7 +26,7 @@ function Navbar() {
                 {
                     (localStorage.getItem("authToken"))
                         ? <div className="user-login">
-                            <li><Link to='/cart'><i className="fa-solid fa-cart-shopping"></i> Cart </Link></li>
+                            <li><Link to='/cart'><i className="fa-solid fa-cart-shopping"></i> Cart </Link> { /*data.length === 0 ? "" : <span>{data.length}</span> */} </li>
                             <li onClick={handleLogout}><Link to='/'><i className="fa-solid fa-arrow-right-from-bracket"></i> Logout </Link></li>
                         </div>
                         : <div className="user-login">

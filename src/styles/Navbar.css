@@ -87,6 +87,7 @@
     transform: scale(1);
     transition: all 0.1s ease-in-out;
     cursor: pointer;
+    position: relative;
 }
 
 .user-login li:hover {
@@ -97,20 +98,27 @@
     transform: scale(0.9);
 }
 
-.user-login li span,
 .user-login li a {
     color: var(--themeColor);
     padding: 5px;
     transition: all 0.1s ease;
 }
 
-.user-login li span:hover,
 .user-login li a:hover {
     color: var(--secondarythemeColor);
     text-decoration: underline;
 }
 
-
+.user-login li span {
+    color: var(--backgroundColor);
+    position: absolute;
+    padding: 0 8px;
+    border: 1px solid red;
+    background-color: red;
+    border-radius: 50%;
+    top: -22px;
+    left: 2px;
+}
 
 /* HAM MENU STYLING */
 

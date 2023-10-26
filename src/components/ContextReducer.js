@@ -10,7 +10,7 @@ const CartDispatchContext = createContext();
 const reducer = (state, action) => {
     switch (action.type) {
         // To add data to cart which will be used to display on cart page
-        case "ADD": return [...state, { id: action.id, name: action.name, rating: action.rating, price: action.price, description: action.description }]
+        case "ADD": return [...state, { id: action.id, name: action.name, rating: action.rating, price: action.price, description: action.description, quantity: action.quantity }]
         default: console.log('Some error occured');
     }
 }
