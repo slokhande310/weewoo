@@ -70,8 +70,10 @@ input[type="checkbox"] {
 }
 
 .explore-food-item img {
+    height: 15rem;
     width: 15rem;
     align-self: center;
+    object-fit: cover;
     transition: all 0.2s ease;
 }
 

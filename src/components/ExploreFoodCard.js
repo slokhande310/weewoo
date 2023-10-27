@@ -1,10 +1,9 @@
 import React from 'react'
-import item1 from '../images/burger1.jpg';
 // import { useCart, useDispatchCart } from './ContextReducer';
 import { useDispatchCart } from './ContextReducer';
 
 function ExploreFoodCard(props) {
-    let { id, name, rating, price, description } = props.foodItems;
+    let { id, name, rating, price, description, image } = props.foodItems;
     let dispatch = useDispatchCart();
     // let data = useCart();
 
@@ -44,7 +43,7 @@ function ExploreFoodCard(props) {
                 <div className="explore-food-item-rating">
                     <i className="fa-solid fa-star"></i><span>{rating}</span>
                 </div>
-                <img src={item1} alt="img" />
+                <img src={image} alt="img" />
                 <div className="explore-food-item-info">
                     <h3>{name}</h3>
                     <p className="explore-food-item-info-desc">{description}</p>
