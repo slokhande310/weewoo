@@ -9,7 +9,9 @@ function Navbar() {
     const navigate = useNavigate();
     const handleLogout = () => {
         localStorage.removeItem("authToken");
-        navigate("/")
+        localStorage.removeItem("userEmail");
+        localStorage.removeItem("cart");
+        navigate("/");
     }
 
     return (
@@ -19,9 +21,14 @@ function Navbar() {
                 <ul className="navbar-items">
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/explore">Explore</Link></li>
+                    {(localStorage.getItem("authToken"))
+                        ?
+                        <li><Link to='/myorders'>Orders</Link></li>
+                        :
+                        ""
+                    }
                     <li><Link to="/blog">Blog</Link></li>
-                    <li><Link to="/help">
-                        Help</Link></li>
+                    <li><Link to="/help">Help</Link></li>
                 </ul>
                 {
                     (localStorage.getItem("authToken"))

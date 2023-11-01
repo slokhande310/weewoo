@@ -17,6 +17,7 @@ import Login from './components/Login';
 import Signup from './components/Signup';
 import Blog from './components/Blog';
 import { CartProvider } from './components/ContextReducer';
+import MyOrders from './components/MyOrders';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Routes>
             <Route exact path='/' element={<><Main /><FoodCard /><PopularFood /></>} />
             <Route exact path='/explore' element={<><Explore /></>} />
+            <Route exact path='/myorders' element={<><MyOrders /></>} />
             <Route exact path='/blog' element={<><Blog /></>} />
             <Route exact path='/login' element={<><Login /></>} />
             <Route exact path='/signup' element={<><Signup /></>} />

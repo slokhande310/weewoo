@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import '../styles/Cart.css'
+import { useCart } from './ContextReducer';
 
 function Cart() {
 
+    let data = useCart();
     // data from local storage is store in cartData
     const [cartData, setCartData] = useState([]); // State to hold cart data
 
@@ -14,7 +16,6 @@ function Cart() {
             // Ensure that each item in the cart has a quantity property
             const updatedCartData = cartFromStorage.map((item) => ({ ...item, quantity: item.quantity || 1 }));
             setCartData(updatedCartData);
-            // console.log(updatedCartData);
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
@@ -55,7 +56,7 @@ function Cart() {
     }
 
     // total after including subtotal, taxes and delivery charges
-    const calculateTotalWithTaxes = () => {
+    const calculateTotal = () => {
         const subtotal = calculateSubtotal();
 
         // Calculate taxes (e.g., 10% tax rate)
@@ -72,11 +73,29 @@ function Cart() {
         localStorage.setItem('cart', JSON.stringify(updatedCartData));
     }
 
+
+
     // clear cart option, just for testing purpose
     const clearCart = () => {
         // Clear the cart data in local storage
         localStorage.removeItem('cart');
         setCartData([]); // Clear the cart data in the component's state
+    }
+
+    const handleCheckout = async (totalAmount) => {
+        let userEmail = localStorage.getItem('userEmail');
+        const response = await fetch('http://127.0.0.1:8000/orderdata', {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email: userEmail, order_data: data, order_date: new Date().toDateString(), totalAmount: totalAmount })
+        })
+
+        if (response.status === 200) {
+            clearCart();
+            console.log('order placed successfully');
+        }
     }
 
     return (
@@ -115,8 +134,8 @@ function Cart() {
                                     <p>Free Delivery</p>
                                     <p>CALCULATE DELIVERY CHARGE</p>
                                     <p>SUBTOTAL <span className='subotal-amt'>$ {calculateSubtotal().toFixed(2)}</span></p>
-                                    <p>TOTAL <span className='total-amt'>$ {calculateTotalWithTaxes().toFixed(2)}</span></p>
-                                    <p className='checkout-btn'>PROCEED TO CHECKOUT</p>
+                                    <p>TOTAL <span className='total-amt'>$ {calculateTotal().toFixed(2)}</span></p>
+                                    <p className='checkout-btn' onClick={() => handleCheckout(calculateTotal())}>PROCEED TO CHECKOUT</p>
                                     <p className='checkout-btn' onClick={clearCart}>Empty Cart</p>
                                 </div>
                             </div>

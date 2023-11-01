@@ -24,6 +24,7 @@ function Login() {
     if (savedData.success) {
       setCredentials({ email: '', password: '' });
       localStorage.setItem("authToken", savedData.authToken);
+      localStorage.setItem("userEmail", credentials.email);
       console.log(localStorage.getItem("authToken"));
       navigate('/');
     }

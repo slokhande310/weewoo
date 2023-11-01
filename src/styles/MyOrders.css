@@ -1,0 +1,68 @@
+.myorders_headline {
+    height: 20vh;
+    background: url(../images/myOrders.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: calc(51%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    color: white;
+    position: relative;
+    font-family: 'Poppins';
+    font-weight: 800;
+}
+
+.myorders_headline span {
+    z-index: 10;
+}
+
+.myorders_tint {
+    position: absolute;
+    height: 20vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.myorders_main {
+    min-height: 70vh;
+    height: auto;
+    background-color: white;
+    padding: 20px 50px;
+    font-weight: 800;
+}
+
+.myorders_date {
+    border-bottom: 3px solid red;
+    padding: 10px 5px;
+    min-height: 35px;
+    height: auto;
+    width: 40%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.myorders_data {
+    border: none;
+    padding: 10px 5px;
+    font-family: 'Poppins';
+    display: flex;
+    flex-direction: column;
+    gap: 0 10px;
+    width: 40%;
+}
+
+.myorders_price {
+    border-bottom: 1px solid green;
+}
+
+.myorders_total {
+    font-size: 1.5rem;
+    padding: 10px 0;
+    text-underline-offset: 5px;
+    text-decoration: underline;
+}
