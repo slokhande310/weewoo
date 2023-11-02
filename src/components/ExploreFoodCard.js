@@ -1,11 +1,9 @@
 import React from 'react'
-// import { useCart, useDispatchCart } from './ContextReducer';
 import { useDispatchCart } from './ContextReducer';
 
 function ExploreFoodCard(props) {
     let { id, name, rating, price, description, image } = props.foodItems;
     let dispatch = useDispatchCart();
-    // let data = useCart();
 
     const handleAddToCart = async () => {
         const quantity = 1;
@@ -31,10 +29,11 @@ function ExploreFoodCard(props) {
             // Store the updated cart data in local storage
             localStorage.setItem('cart', JSON.stringify(updatedCart));
 
+            props.notify('Item added to the cart', 'success');
             console.log(updatedCart);
         } else {
             // Handle the case where the item already exists in the cart
-            alert('Item already in the cart.');
+            props.notify('Item already in the cart', 'error');
         }
     }
     return (

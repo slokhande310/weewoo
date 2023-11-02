@@ -9,7 +9,6 @@ router.post('/orderdata', async (req, res) => {
     await data.splice(1, 0, { totalAmount: req.body.totalAmount });
 
     let emailID = await order.findOne({ 'email': req.body.email });
-    console.log(emailID);
     if (emailID == null) {
         try {
             await order.create({

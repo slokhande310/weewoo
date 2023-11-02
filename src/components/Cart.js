@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import '../styles/Cart.css'
-import { useCart } from './ContextReducer';
+import { useCart, useDispatchCart } from './ContextReducer';
 
 function Cart() {
 
     let data = useCart();
+    let dispatch = useDispatchCart();
     // data from local storage is store in cartData
     const [cartData, setCartData] = useState([]); // State to hold cart data
 
@@ -71,6 +72,7 @@ function Cart() {
         const updatedCartData = cartData.filter((cartItem) => cartItem.id !== itemToRemove.id);
         setCartData(updatedCartData);
         localStorage.setItem('cart', JSON.stringify(updatedCartData));
+        dispatch({ type: 'REMOVE', id: itemToRemove.id });
     }
 
 
@@ -79,7 +81,8 @@ function Cart() {
     const clearCart = () => {
         // Clear the cart data in local storage
         localStorage.removeItem('cart');
-        setCartData([]); // Clear the cart data in the component's state
+        dispatch({ type: "DROP" })
+        setCartData([]);
     }
 
     const handleCheckout = async (totalAmount) => {
@@ -135,7 +138,7 @@ function Cart() {
                                     <p>CALCULATE DELIVERY CHARGE</p>
                                     <p>SUBTOTAL <span className='subotal-amt'>$ {calculateSubtotal().toFixed(2)}</span></p>
                                     <p>TOTAL <span className='total-amt'>$ {calculateTotal().toFixed(2)}</span></p>
-                                    <p className='checkout-btn' onClick={() => handleCheckout(calculateTotal())}>PROCEED TO CHECKOUT</p>
+                                    <p className='checkout-btn' onClick={() => handleCheckout(calculateTotal().toFixed(2))}>PROCEED TO CHECKOUT</p>
                                     <p className='checkout-btn' onClick={clearCart}>Empty Cart</p>
                                 </div>
                             </div>

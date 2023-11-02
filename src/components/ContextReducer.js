@@ -11,6 +11,13 @@ const reducer = (state, action) => {
     switch (action.type) {
         // To add data to cart which will be used to display on cart page
         case "ADD": return [...state, { id: action.id, name: action.name, rating: action.rating, price: action.price, description: action.description, quantity: action.quantity }]
+        case "REMOVE":
+            // Filter out the item with the specified ID to remove it from the cart
+            return state.filter(item => item.id !== action.id);
+
+        case "DROP":
+            return [];
+            
         default: console.log('Some error occured');
     }
 }

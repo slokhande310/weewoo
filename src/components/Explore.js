@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import '../styles/Explore.css'
 import ExploreFoodCard from './ExploreFoodCard';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function Explore() {
 
@@ -24,6 +27,16 @@ function Explore() {
         setFoodCategory(response[1]);
     }
 
+    const notify = (message, condition) => {
+        const toastStyle = {
+            background: condition === 'success' ? '#4CAF50' : '#F44336',
+            color: '#fff'
+        }
+        toast.info(message, {
+            style: toastStyle
+        });
+    };
+
     const handleCheckboxChange = (category) => {
         if (selectedCategories.includes(category)) {
             setSelectedCategories(selectedCategories.filter((item) => item !== category));
@@ -45,6 +58,19 @@ function Explore() {
 
     return (
         <>
+            <ToastContainer
+                position="bottom-center"
+                autoClose={3000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick    
+                rtl={false}
+                pauseOnFocusLoss={false}
+                draggable
+                pauseOnHover={false}
+                theme="colored"
+            />
+
             <div className="explore-page">
                 <div className="sidebar">
                     <h2>Food Preferences</h2>
@@ -75,7 +101,7 @@ function Explore() {
                         filterMenuItems !== ""
                             ? filterMenuItems.map((data) => {
                                 return (
-                                    <ExploreFoodCard key={data._id} foodItems={data} />
+                                    <ExploreFoodCard key={data._id} foodItems={data} notify={notify} />
                                 )
                             })
                             : ""
