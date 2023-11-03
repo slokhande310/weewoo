@@ -1,14 +1,14 @@
 import { React, useEffect, useState } from 'react';
 import '../styles/PopularFood.css';
 import { useDispatchCart } from './ContextReducer';
-// import { useCart, useDispatchCart } from './ContextReducer';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function PopularFood() {
     const [active, setActive] = useState('burger');
     const [popularFoodItem, setpopularFoodItem] = useState([]);
 
     let dispatch = useDispatchCart();
-    // let data = useCart();
 
     const loadData = async () => {
         let response = await fetch("http://127.0.0.1:8000/", {
@@ -30,6 +30,16 @@ function PopularFood() {
     const handleClick = (item) => {
         setActive(item);
     }
+
+    const notify = (message, condition) => {
+        const toastStyle = {
+            background: condition === 'success' ? '#4CAF50' : '#F44336',
+            color: '#fff'
+        }
+        toast.info(message, {
+            style: toastStyle
+        });
+    };
 
     const handleAddToCart = async (item) => {
         const quantity = 1;
@@ -54,14 +64,27 @@ function PopularFood() {
 
             // Store the updated cart data in local storage
             localStorage.setItem('cart', JSON.stringify(existingCart));
+            notify('Item added to the cart', 'success');
         } else {
-            alert('Item already exists in the cart, not adding it again.');
+            notify('Item already in the cart', 'error');
         }
 
     }
 
     return (
         <>
+            <ToastContainer
+                position="bottom-center"
+                autoClose={3000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss={false}
+                draggable
+                pauseOnHover={false}
+                theme="colored"
+            />
             <section className="popular-food">
                 <h2>Popular Today</h2>
                 <div className="popular-items">

@@ -5,9 +5,33 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    justify-content: center;
+    justify-content: flex-end;
     font-family: 'Poppins', sans-serif;
-    padding: 0 8%;
+    padding: 0 8% 5%;
+}
+
+.main_carousel {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 80%;
+    margin: auto;
+}
+.main_carousel div img{
+    width: 100%;
+    max-height: 500px;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.slick-dots {
+    bottom: -40px !important;
+}
+
+.slick-dots li button:before {
+    font-size: 10px !important;
+    color: white !important;
 }
 
 .main h1 {
@@ -59,9 +83,16 @@
     font-weight: 600;
     cursor: pointer;
     font-size: 1.1rem;
-    transition: all 0.2s ease-in-out;
+    outline: 0;
+    border: 0;
+    transition: all 0.15s ease-in-out;
 }
 
+.find-food-btn.disabled {
+    cursor: not-allowed;
+    background-color: #232020;
+    color: white;
+}
 
 .find-food-btn:hover {
     background-color: #232020;
@@ -92,4 +123,3 @@
 .dropdown-row:hover {
     font-weight: bolder;
 }
-
