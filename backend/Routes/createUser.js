@@ -88,7 +88,7 @@ router.post('/login', async (req, res) => {
     }
 });
 
-
+module.exports = router;
 
 /*
 
@@ -181,4 +181,3 @@ router.post('/', (req, res, next) => {
 
 });
 */
-module.exports = router;

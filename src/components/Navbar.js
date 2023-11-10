@@ -11,6 +11,7 @@ function Navbar() {
         localStorage.removeItem("authToken");
         localStorage.removeItem("userEmail");
         localStorage.removeItem("cart");
+        localStorage.removeItem("userLocation");
         navigate("/");
     }
 
