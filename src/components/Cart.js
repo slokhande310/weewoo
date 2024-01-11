@@ -137,7 +137,7 @@ function Cart() {
                                     <p>Free Delivery</p>
                                     <p>CALCULATE DELIVERY CHARGE</p>
                                     <p>SUBTOTAL <span className='subotal-amt'>$ {calculateSubtotal().toFixed(2)}</span></p>
-                                    <p>TOTAL <span className='total-amt'>$ {calculateTotal().toFixed(2)}</span></p>
+                                    <p>TOTAL (10% TAX) <span className='total-amt'>$ {calculateTotal().toFixed(2)}</span></p>
                                     <p className='checkout-btn' onClick={() => handleCheckout(calculateTotal().toFixed(2))}>PROCEED TO CHECKOUT</p>
                                     <p className='checkout-btn' onClick={clearCart}>Empty Cart</p>
                                 </div>

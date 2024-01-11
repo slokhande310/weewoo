@@ -39,6 +39,10 @@
     font-size: 25px !important;
 }
 
+.slick-prev:before {
+    margin-left: -5px;
+}
+
 .delivery_section {
     height: 150px;
 }
