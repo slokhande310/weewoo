@@ -6,8 +6,7 @@ const cors = require("cors");
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 router.use(cors());
-
-const jwtSecret = "qfktvrknassbkycawxcysdcsepwfidrn";
+require('dotenv').config();
 
 // Endpoint logic for sign up
 
@@ -80,7 +79,7 @@ router.post('/login', async (req, res) => {
             }
         }
 
-        const authToken = jwt.sign(data, jwtSecret);
+        const authToken = jwt.sign(data, process.env.JWT_SECTRET);
         res.json({ success: true, authToken: authToken });
     } catch (error) {
         console.log(error);
