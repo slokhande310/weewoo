@@ -25,6 +25,10 @@
     margin-bottom: 20px;
 }
 
+.login-screen-form .input-container {
+    padding: 10px 0 0 0;
+}
+
 .login-screen-form .input-container input {
     width: 100%;
     height: 50px;
