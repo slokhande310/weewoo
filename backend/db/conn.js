@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
-const mongoURI = 'mongodb+srv://shubh:shubh@cluster0.2fkxbci.mongodb.net/weewoo?retryWrites=true&w=majority';
+require('dotenv').config();
 // const mongoURI = 'mongodb://0.0.0.0:27017/weewoo';
 
 const mongoDB = async () => {
     try {
-        await mongoose.connect(mongoURI);                                                   // connect to Atlas URI
+        await mongoose.connect(process.env.MONGO_URI);                                                   // connect to Atlas URI
         console.log('connection successful');
 
         const menuData = await mongoose.connection.db.collection("menu");                    // access menu collection
