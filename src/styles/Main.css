@@ -11,38 +11,6 @@
     gap: 30px 0;
 }
 
-.main_carousel {
-    padding: 15px;
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 80%;
-    margin: 15px auto;
-}
-
-.main_carousel div img {
-    width: 100%;
-    max-height: 500px;
-    margin: auto;
-    object-fit: fill;
-}
-
-.slick-dots {
-    bottom: -40px !important;
-}
-
-.slick-dots li button:before {
-    font-size: 10px !important;
-    color: white !important;
-}
-
-.slick-prev:before,
-.slick-next:before {
-    font-size: 25px !important;
-}
-
-.slick-prev:before {
-    margin-left: -5px;
-}
-
 .delivery_section {
     height: 150px;
 }
@@ -144,7 +112,8 @@
 
 
 .delivery_section_location {
-    margin: 0 auto;
+    margin: auto 0;
+    margin-bottom: 45%;
     height: 150px;
     width: 80%;
 }

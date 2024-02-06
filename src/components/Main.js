@@ -1,12 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import '../styles/Main.css'
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 const location = require('../json/location.json')
-const carousel = require('../json/carousel.json')
-
 
 function Main() {
     const [value, setValue] = useState('');
@@ -53,34 +48,9 @@ function Main() {
         setValue(selectedLocation);
     }
 
-    const settings = {
-        dots: true,
-        slide: true,
-        infinite: true,
-        speed: 500,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        slidesToShow: 1,
-        slidesToScroll: 1
-    };
-
     return (
         <>
             <main className="main">
-                <div className="main_carousel">
-                    <Slider {...settings} >
-                        {
-                            carousel.map(img => {
-                                return (
-                                    <div key={img.id}>
-                                        <img src={img.image} alt='img' />
-                                    </div>
-                                )
-                            })
-                        }
-                    </Slider>
-                </div>
-
                 <div className={`delivery_section_location ${userLocation ? '' : 'hide'}`}>
                     <h3>Location: <span >{userLocation}</span></h3>
                     <p onClick={changeLocation}>Change location...</p>
