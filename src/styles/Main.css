@@ -110,14 +110,6 @@
     font-weight: bolder;
 }
 
-
-.delivery_section_location {
-    margin: auto 0;
-    margin-bottom: 45%;
-    height: 150px;
-    width: 80%;
-}
-
 .delivery_section_location.hide {
     display: none;
 }
