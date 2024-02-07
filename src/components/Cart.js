@@ -87,7 +87,7 @@ function Cart() {
 
     const handleCheckout = async (totalAmount) => {
         let userEmail = localStorage.getItem('userEmail');
-        const response = await fetch('http://127.0.0.1:8000/orderdata', {
+        const response = await fetch('https://weewoo-food-app.onrender.com/orderdata', {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'

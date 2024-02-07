@@ -14,7 +14,7 @@ function Explore() {
     const [selectedCategories, setSelectedCategories] = useState([]);
 
     const loadData = async () => {
-        let response = await fetch("http://127.0.0.1:8000/explore", {
+        let response = await fetch("https://weewoo-food-app.onrender.com/explore", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
