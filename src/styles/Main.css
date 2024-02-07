@@ -143,3 +143,34 @@
 .delivery_section_location p:hover {
     text-decoration: underline;
 }
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 1024px) {
+
+    .delivery-addr {
+        width: 70%;
+    }
+
+    .delivery_section h1 {
+        font-size: 2.8rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .delivery-content {
+        flex-wrap: wrap;
+        gap: 5px 0;
+        justify-content: flex-start;
+    }
+    .delivery-addr {
+        width: 100%;
+    }
+
+    .delivery_section h1 {
+        font-size: 2.3rem;
+    }
+
+}
