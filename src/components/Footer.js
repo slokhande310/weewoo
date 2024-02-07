@@ -37,7 +37,7 @@ function Footer() {
                         <li className="footer-about-list">Terms</li>
                         <li className="footer-about-list">Sitemap</li>
                     </div>
-                    <div className="footer-socials">
+                    <div className="footer-about footer-socials">
                         <li className="footer-about-list header">SOCIALS</li>
                         <li className="footer-social-links"><a href="/"><i className="fa-brands fa-facebook-f"></i></a></li>
                         <li className="footer-social-links"><a href="/"><i className="fa-brands fa-pinterest"></i></a></li>

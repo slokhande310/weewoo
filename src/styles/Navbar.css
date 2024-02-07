@@ -21,7 +21,6 @@
     font-size: 2rem;
     font-weight: 800;
     cursor: pointer;
-    padding: 4px 10px;
 }
 
 /* NAVBAR ITEMS STYLING */
@@ -30,7 +29,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
     font-family: 'Poppins', sans-serif;
     font-size: 1.1rem;
     font-weight: 800;
@@ -71,7 +69,6 @@
 
 
 .user-login {
-    width: 15%;
     display: flex;
     font-weight: 700;
     font-size: 1.1rem;
@@ -89,23 +86,13 @@
     position: relative;
 }
 
-.user-login li:hover {
-    transform: scale(1.02);
-}
-
-.user-login li:active {
-    transform: scale(0.9);
-}
-
 .user-login li a {
     color: var(--themeColor);
-    padding: 5px;
-    transition: all 0.1s ease;
+    transition: all 0.15s ease;
 }
 
 .user-login li a:hover {
     color: var(--secondarythemeColor);
-    text-decoration: underline;
 }
 
 .user-login li span {
@@ -123,12 +110,144 @@
 
 .menubar {
     display: none;
+    position: absolute;
+    right: 30px;
 }
 
 .ham {
-    display: none;
     color: var(--themeColor);
     padding: 5px;
     cursor: pointer;
     font-size: 1.3rem;
+}
+
+.responsive-profile {
+    display: none;
+    position: absolute;
+    right: 80px;
+    color: var(--themeColor);
+}
+
+.responsive-profile i {
+    padding: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+/* ANIMATION */
+
+@keyframes LeftToRight {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 1280px) {
+
+    .navbar {
+        padding: 0 4%;
+    }
+
+    .navbar-items {
+        gap: 0 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .navbar {
+        padding: 0 8%;
+    }
+
+    .navbar-items.hide {
+        display: none;
+        animation: none;
+    }
+
+    .navbar-items {
+        position: absolute;
+        left: 0;
+        top: 10vh;
+        flex-direction: column;
+        padding: 10px 0;
+        width: 100%;
+        text-align: center;
+        background-color: var(--themeColor);
+        overflow: hidden;
+    }
+
+    .navbar-items.show {
+        display: flex;
+        animation: LeftToRight 0.3s ease forwards;
+    }
+
+    .navbar-items li {
+        width: 100%;
+        margin: 0;
+        padding: 20px 0;
+    }
+
+    .navbar-items li a {
+        padding: 20px 40%;
+        color: black;
+        font-size: 1.5rem;
+        font-weight: 800;
+    }
+
+    .navbar-items li a::before {
+        display: none;
+    }
+
+    .menubar {
+        display: block;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+
+    .user-login.hide {
+        display: none;
+    }
+
+    .user-login {
+        position: absolute;
+        left: 0;
+        top: 10vh;
+        flex-direction: column;
+        padding: 10px 0;
+        width: 100%;
+        text-align: center;
+        background-color: var(--themeColor);
+        overflow: hidden;
+    }
+
+    .user-login.show {
+        display: flex;
+        animation: LeftToRight 0.3s ease forwards;
+    }
+
+    .user-login li {
+        width: 100%;
+        margin: 0;
+        padding: 20px 0;
+    }
+
+    .user-login li a {
+        padding: 20px 40%;
+        color: black;
+        font-size: 1.2rem;
+        font-weight: 800;
+    }
+
+    .responsive-profile {
+        display: block;
+    }
 }

@@ -10,7 +10,8 @@
 
 
 .card-items {
-    width: 20%;
+    min-width: 15%;
+    width: auto;
     height: 120px;
     background-color: #f2efe6;
     border-radius: 25px;
@@ -41,4 +42,32 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 800;
     margin-left: 20px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 1024px) {
+    .food-cards {
+        gap: 0 15px;
+    }
+}
+
+
+@media (max-width: 940px) {
+    
+    .card-items {
+        margin: 20px 0;
+        width: 40%;
+    }
+
+    .card-items span {
+        padding: 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .card-items {
+        width: 80%;
+        justify-content: center;
+    }
 }
