@@ -14,7 +14,6 @@
     background-color: #333;
     color: #fff;
     padding: 20px;
-    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     margin: 40px 0;
 }
@@ -36,7 +35,6 @@ input[type="checkbox"] {
     width: 80%;
     margin: 40px 0;
     border: 1px solid #333;
-    min-width: 90vh;
     height: auto;
     display: grid;
     grid-template-columns: repeat(3, auto);
@@ -50,6 +48,7 @@ input[type="checkbox"] {
     height: 33rem;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     text-align: center;
     position: relative;
 }
@@ -119,4 +118,79 @@ input[type="checkbox"] {
 .explore-food-item-btn:hover {
     background-color: var(--secondarythemeColor);
     color: white;
+}
+
+.load-more-btn {
+    place-self: center;
+    padding: 5px 15px;
+    width: auto;
+    max-width: 10rem;
+    margin: 20px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    border: 2px solid var(--secondarythemeColor);
+    user-select: none;
+    text-align: center;
+    background-color: white;
+    font-weight: 700;
+    transition: all 0.15s ease;
+}
+
+.load-more-btn:hover {
+    background-color: var(--secondarythemeColor);
+    color: white;
+}
+
+
+@media (max-width: 1280px) {
+    .explore-food {
+        grid-template-columns: repeat(2, auto);
+    }
+}
+
+@media (max-width: 1024px) {
+    .sidebar {
+        display: none;
+    }
+
+    .explore-food {
+        width: 100%;
+        grid-template-columns: repeat(3, auto);
+    }
+
+    .explore-page {
+        padding: 0 3%;
+    }
+
+    .explore-food-item {
+        height: auto;
+        min-height: 30rem;
+    } 
+
+    .explore-food-item img {
+        width: 10rem;
+        height: 10rem;
+    }
+    .explore-food-item-btn {
+        width: 130px;
+    }
+
+    .explore-food-item-info h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media not all and (min-width: 640px) {
+    .explore-food {
+        grid-template-columns: repeat(1, auto);
+    }
+
+    .explore-food-item img {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    .explore-food-item {
+        height: auto;
+    } 
 }

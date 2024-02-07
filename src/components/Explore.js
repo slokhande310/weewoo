@@ -12,6 +12,12 @@ function Explore() {
     const [menuItem, setMenuItem] = useState([]);
     const [foodCategory, setFoodCategory] = useState([]);
     const [selectedCategories, setSelectedCategories] = useState([]);
+    const [visibleItems, setVisibleItems] = useState(12);
+
+    const handleLoadMore = () => {
+        // Increase the number of visible items by 10 (or any desired increment)
+        setVisibleItems((prevVisibleItems) => prevVisibleItems + 12);
+      };
 
     const loadData = async () => {
         let response = await fetch("https://weewoo-food-app.onrender.com/explore", {
@@ -63,7 +69,7 @@ function Explore() {
                 autoClose={3000}
                 hideProgressBar={false}
                 newestOnTop={false}
-                closeOnClick    
+                closeOnClick
                 rtl={false}
                 pauseOnFocusLoss={false}
                 draggable
@@ -97,15 +103,13 @@ function Explore() {
                     }
                 </div>
                 <div className="explore-food">
-                    {
-                        filterMenuItems !== ""
-                            ? filterMenuItems.map((data) => {
-                                return (
-                                    <ExploreFoodCard key={data._id} foodItems={data} notify={notify} />
-                                )
-                            })
-                            : ""
-                    }
+                    {filterMenuItems.slice(0, visibleItems).map((data) => (
+                        <ExploreFoodCard key={data._id} foodItems={data} notify={notify} />
+                    ))}
+
+                    {visibleItems < filterMenuItems.length && (
+                        <span className='load-more-btn' onClick={handleLoadMore}>Load More</span>
+                    )}
                 </div>
             </div >
         </>
