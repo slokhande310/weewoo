@@ -121,6 +121,7 @@ input[type="checkbox"] {
 }
 
 .load-more-btn {
+    place-self: center;
     padding: 5px 15px;
     width: auto;
     max-width: 10rem;
