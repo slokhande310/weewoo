@@ -194,7 +194,7 @@
     }
 
     .navbar-items li a {
-        padding: 20px 40%;
+        padding: 20px 20%;
         color: black;
         font-size: 1.5rem;
         font-weight: 800;
@@ -241,7 +241,7 @@
     }
 
     .user-login li a {
-        padding: 20px 40%;
+        padding: 20px 20%;
         color: black;
         font-size: 1.2rem;
         font-weight: 800;

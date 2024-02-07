@@ -20,10 +20,12 @@ function Navbar() {
 
     const toggleHamMenu = () => {
         setShowMenu(!showMenu);
+        setShowProfile(false);
     }
 
     const toggleProfileMenu = () => {
         setShowProfile(!showProfile);
+        setShowMenu(false);
     }
 
 
