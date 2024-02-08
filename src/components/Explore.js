@@ -3,6 +3,7 @@ import '../styles/Explore.css'
 import ExploreFoodCard from './ExploreFoodCard';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Spinner from './Spinner';
 
 
 function Explore() {
@@ -17,7 +18,7 @@ function Explore() {
     const handleLoadMore = () => {
         // Increase the number of visible items by 10 (or any desired increment)
         setVisibleItems((prevVisibleItems) => prevVisibleItems + 12);
-      };
+    };
 
     const loadData = async () => {
         let response = await fetch("https://weewoo-food-app.onrender.com/explore", {
@@ -81,7 +82,7 @@ function Explore() {
                 <div className="sidebar">
                     <h2>Food Preferences</h2>
                     {
-                        foodCategory !== ""
+                        foodCategory && foodCategory.length !== 0
                             ? foodCategory.map((data) => {
                                 return (
                                     <div key={data._id}>
@@ -99,7 +100,7 @@ function Explore() {
                                     </div>
                                 )
                             })
-                            : ""
+                            : <Spinner />
                     }
                 </div>
                 <div className="explore-food">

@@ -3,6 +3,7 @@ import '../styles/PopularFood.css';
 import { useDispatchCart } from './ContextReducer';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Spinner from './Spinner'
 
 function PopularFood() {
     const [active, setActive] = useState('burger');
@@ -95,7 +96,7 @@ function PopularFood() {
                 </div>
                 <div className="popular-card">
                     {
-                        popularFoodItem !== ""
+                        popularFoodItem && popularFoodItem.length !== 0
                             ? popularFoodItem.filter(data => data.category === active)
                                 .map((data) => {
                                     return (
@@ -109,7 +110,7 @@ function PopularFood() {
                                         </div>
                                     )
                                 })
-                            : ""
+                            : <Spinner />
                     }
                 </div>
             </section>

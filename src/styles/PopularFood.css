@@ -138,3 +138,9 @@
         width: 25rem;
     }
 }
+
+@media (max-width: 640px) {
+    .popular-items p {
+        padding: 5px;
+    }
+}
